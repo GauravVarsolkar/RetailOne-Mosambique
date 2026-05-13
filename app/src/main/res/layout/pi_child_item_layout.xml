@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:backgroundTint="@android:color/white"
+    app:cardCornerRadius="8dp"
+    app:strokeWidth="0.5dp"
+    app:strokeColor="@color/colorgreyfaded">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp">
+
+        <!-- Colored Status Badge -->
+        <!-- Colored Status Badge with Letter -->
+        <TextView
+            android:id="@+id/view_status"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="G"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_circle_scren"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Batch Info -->
+        <LinearLayout
+            android:id="@+id/layout_batch_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/view_status"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/layout_right_info"
+            app:layout_constraintHorizontal_bias="0">
+
+            <TextView
+                android:id="@+id/txt_batch_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 ml - Batch A"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/avenirnextltpro_medium" />
+
+            <TextView
+                android:id="@+id/txt_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2025-07-08"
+                android:textColor="@color/textlite"
+                android:textSize="12sp"
+                android:fontFamily="@font/avenirnextltpro_medium" />
+        </LinearLayout>
+
+        <!-- Quantity + Price Column -->
+        <LinearLayout
+            android:id="@+id/layout_right_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/txt_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="982"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/avenirnextltpro_medium" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RWF112.00"
+                android:textColor="#3949AB"
+                android:textSize="12sp"
+                android:fontFamily="@font/avenirnextltpro_medium" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_white"
+            app:layout_constraintTop_toBottomOf="@id/layout_batch_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

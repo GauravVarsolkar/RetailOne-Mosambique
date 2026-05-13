@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 🔹 PRODUCT NAME + EXPAND ICON -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 ml pouch 500 ml"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/ivExpand"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_up"
+                android:contentDescription="Expand"
+                android:padding="4dp" />
+        </RelativeLayout>
+
+        <!-- 🔹 ROWS: Label-Value layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Code -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="2dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/stock_code_label"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvProductCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRD002"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Stock -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/stock_sellable_label"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvstorestockQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="992 units"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- Stock -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/stock_total_label"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvStockQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="992 units"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- Requested -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="2dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/stock_requested_label"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvRequestedQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 units"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 🔽 Expandable Batch Section -->
+        <LinearLayout
+            android:id="@+id/llExpandable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="12dp">
+
+            <!-- Header row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_header_bg"
+            android:orientation="horizontal"
+
+            android:padding="8dp">
+                <TextView
+                    android:id="@+id/tvStockQTY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="@string/status_store_stock"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvBatchName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:text="@string/batch_label"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:text="@string/status_label"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvAvailableQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/stock_available_label"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvEnterQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:text="@string/quantity_label"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingVertical="8dp">
+
+              <TextView
+                  android:layout_width="99dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="0"
+                  android:text="Batch Name"
+                  android:textColor="@color/black"
+                  android:textSize="14sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="0dp"
+                  android:layout_weight="0.4"
+                  android:text="Status"
+                  android:textStyle="bold"
+                  android:textColor="@color/black"
+                  android:textSize="14sp" />
+
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="0dp"
+                  android:layout_weight="0.4"
+                  android:text="Available"
+                  android:textStyle="bold"
+                  android:textColor="@color/black"
+                  android:textSize="14sp" />
+
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="0dp"
+                  android:layout_weight="0.4"
+                  android:text="Enter Qty"
+                  android:textStyle="bold"
+                  android:textColor="@color/black"
+                  android:textSize="14sp" />
+          </LinearLayout>-->
+
+            <!-- RecyclerView for batch list -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBatchList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txt_batch_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Batch: "
+    android:textColor="@color/textlite"
+    android:textSize="14sp"
+    android:padding="6dp"
+
+    android:background="@color/light_white"
+    android:layout_marginTop="6dp"
+    />
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/txt_batch_header"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Batch: - | Stock: 0"
+android:textColor="@color/textlite"
+android:textSize="14sp"
+android:padding="6dp"
+
+android:background="@color/light_white"
+android:layout_marginTop="6dp"
+    />-->

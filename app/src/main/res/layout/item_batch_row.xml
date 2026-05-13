@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Main Row: Stock, Batch, Status, Available, Enter Qty -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="150"
+
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvBatchNos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1313"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <TextView
+       android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:text="Good"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/bg_badge_damaged"
+            android:padding="4dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvAvailableQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="75"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etEnterQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:inputType="number"
+            android:hint=""
+            android:gravity="end"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Reason and Remarks Section -->
+    <LinearLayout
+        android:id="@+id/llExtraFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_marginTop="8dp">
+
+        <Spinner
+            android:id="@+id/spReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/good_reasons_array" />
+
+        <EditText
+            android:id="@+id/etRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_enter_remarks"
+            android:inputType="text"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</LinearLayout>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tvBatchNos"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1313" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Good"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/bg_badge_damaged"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvAvailableQty"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="75" />
+
+        <EditText
+            android:id="@+id/etEnterQty"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="0"
+            android:gravity="center"
+            android:background="@android:drawable/editbox_background" />
+    </LinearLayout>
+    <LinearLayout
+    android:id="@+id/llExtraFields"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:layout_marginTop="8dp">
+
+    <Spinner
+        android:id="@+id/spReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/good_reasons_array" />
+
+    <EditText
+        android:id="@+id/etRemarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter remarks"
+        android:inputType="text"
+        android:layout_marginTop="8dp" />
+    </LinearLayout>
+    </LinearLayout>
+    -->

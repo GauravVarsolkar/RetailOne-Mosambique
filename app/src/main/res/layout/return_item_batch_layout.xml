@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/quantity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginVertical="4dp"
+        android:paddingVertical="3dp"
+        android:background="@drawable/shape_curve_grey_small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/paymentcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <!-- Horizontal strip -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dp"
+                android:gravity="center_vertical">
+
+                <!-- CONSTANT ROW HEIGHT: 48dp for **every** tile -->
+
+                <!-- Batch -->
+                <RelativeLayout
+                    android:id="@+id/batchname_layout"
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="8dp"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:id="@+id/batch_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/batch_label"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/avenirnextltpro_medium"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!-- Price -->
+                <RelativeLayout
+                    android:id="@+id/batch_pricelayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="6dp"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/shape_curve_grey_small">
+
+                    <TextView
+                        android:id="@+id/batch_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_label"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/avenirnextltpro_medium"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!-- Stock -->
+                <RelativeLayout
+                    android:id="@+id/sale_layout"
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/shape_curve_grey_small">
+
+                    <TextView
+                        android:id="@+id/sale_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stock_label"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/avenirnextltpro_medium"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!-- Return Quantity -->
+                <RelativeLayout
+                    android:id="@+id/return_quantity_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="6dp"
+                    android:paddingHorizontal="10dp"
+                    android:background="@drawable/shape_curve_grey_small">
+
+                    <EditText
+                        android:id="@+id/return_quantity"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint="@string/qty_label"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:includeFontPadding="false"
+                        android:background="@drawable/rounded_edittext_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/avenirnextltpro_medium"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!-- Update Button -->
+                <RelativeLayout
+                    android:id="@+id/update_button_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="6dp"
+                    android:paddingHorizontal="6dp"
+                    android:background="@drawable/shape_curve_grey_small">
+
+                    <ImageButton
+                        android:id="@+id/update_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_dispatch_button"
+                        android:src="@drawable/pencil"
+                        android:scaleType="centerInside"
+                        android:contentDescription="@string/update_button_description"
+                        android:tint="@android:color/white"
+                        android:padding="8dp"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+
+    <!-- <LinearLayout
+         android:id="@+id/quantity_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginVertical="4dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginEnd="8dp"
+         android:paddingVertical="3dp"
+         android:background="@drawable/shape_curve_grey_small"
+         android:visibility="visible"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toTopOf="@+id/paymentcard"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent">
+
+         <HorizontalScrollView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:fillViewport="true"
+             android:scrollbars="none">
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:padding="6dp">
+
+                 &lt;!&ndash; Batch &ndash;&gt;
+                 <LinearLayout
+                     android:id="@+id/batchname_layout"
+                     android:layout_width="50dp"
+                     android:layout_gravity="center_vertical"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:padding="6dp">
+
+                     <TextView
+                         android:id="@+id/batch_name"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/batch_label"
+                         android:textSize="13sp"
+                         android:fontFamily="@font/avenirnextltpro_medium"
+                         android:layout_gravity="start" />
+                 </LinearLayout>
+
+                 &lt;!&ndash; Price &ndash;&gt;
+                 <LinearLayout
+                     android:layout_gravity="center_vertical"
+
+                     android:id="@+id/batch_pricelayout"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:padding="6dp"
+
+                     android:background="@drawable/shape_curve_grey_small">
+
+                     <TextView
+                         android:id="@+id/batch_price"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/price_label"
+                         android:textSize="13sp"
+                         android:fontFamily="@font/avenirnextltpro_medium"
+                         android:layout_gravity="start" />
+                 </LinearLayout>
+
+                 &lt;!&ndash; Stock &ndash;&gt;
+                 <LinearLayout
+                     android:layout_gravity="center_vertical"
+                     android:gravity="center"
+                     android:id="@+id/sale_layout"
+                     android:layout_width="50dp"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:padding="6dp"
+                     android:layout_marginStart="6dp"
+                     android:background="@drawable/shape_curve_grey_small">
+
+                     <TextView
+                         android:id="@+id/sale_quantity"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/stock_label"
+                         android:textSize="13sp"
+                         android:fontFamily="@font/avenirnextltpro_medium"
+                         android:layout_gravity="center_horizontal" />
+                 </LinearLayout>
+
+                 &lt;!&ndash; Return Quantity &ndash;&gt;
+                 <LinearLayout
+                     android:layout_gravity="center_vertical"
+
+                     android:id="@+id/return_quantity_layout"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:padding="6dp"
+
+                     android:background="@drawable/shape_curve_grey_small">
+
+                     <EditText
+                         android:id="@+id/return_quantity"
+                         android:layout_width="70dp"
+                         android:layout_height="wrap_content"
+                         android:hint="@string/quantity_label"
+                         android:gravity="center"
+                         android:inputType="number"
+                         android:maxLength="8"
+                         android:padding="5dp"
+                         android:textSize="15sp"
+                         android:textStyle="bold"
+                         android:textColor="@color/primary"
+                         android:background="@drawable/rounded_edittext_background"
+                         android:fontFamily="@font/avenirnextltpro_medium" />
+                 </LinearLayout>
+
+                 &lt;!&ndash; Update Button &ndash;&gt;
+               &lt;!&ndash;  <LinearLayout
+                     android:id="@+id/update_button_layout"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:layout_marginStart="6dp"
+                     android:gravity="center"
+                     android:padding="6dp"
+                     android:background="@drawable/shape_curve_grey_small">
+
+                     <Button
+                         android:id="@+id/update_btn"
+                         android:layout_width="100dp"
+                         android:layout_height="35dp"
+                         android:text="@string/update_button_description"
+                         android:background="@drawable/bg_dispatch_button"
+                         android:textColor="@color/white"
+                         android:textStyle="bold"
+                         android:fontFamily="@font/avenirnextltpro_medium" />
+                 </LinearLayout>&ndash;&gt;
+                 <LinearLayout
+                     android:id="@+id/update_button_layout"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+
+                     android:gravity="center"
+                     android:padding="6dp"
+                     android:layout_gravity="center_horizontal"
+
+                     android:background="@drawable/shape_curve_grey_small">
+
+                     <ImageButton
+                         android:id="@+id/update_btn"
+                         android:layout_width="35dp"
+                         android:layout_height="35dp"
+                         android:background="@drawable/bg_dispatch_button"
+                         android:src="@drawable/pencil"
+                     android:scaleType="centerInside"
+                      android:contentDescription="@string/update_button_description"
+                     android:tint="@android:color/white"
+                     android:padding="8dp" />
+                 </LinearLayout>
+
+
+             </LinearLayout>
+         </HorizontalScrollView>
+     </LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/quantity_layouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/shape_curve_grey_small"
+
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingVertical="3dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toTopOf="@+id/paymentcards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/batchname_layouts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:paddingVertical="2dp">
+
+            <TextView
+                android:id="@+id/batch_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/avenirnextltpro_medium"
+                android:text="@string/batch_label"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/batch_pricelayouts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1.4"
+            android:background="@drawable/shape_curve_grey_small"
+            android:orientation="vertical"
+            android:paddingVertical="2dp">
+
+            <TextView
+                android:id="@+id/batch_prices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/avenirnextltpro_medium"
+                android:text="@string/price_label"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sale_layouts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/shape_curve_grey_small"
+            android:orientation="vertical"
+            android:paddingVertical="2dp">
+
+            <TextView
+                android:id="@+id/sale_quantitys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/avenirnextltpro_medium"
+                android:text="@string/stock_label"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/return_quantity_layouts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_curve_grey_small"
+            android:orientation="vertical"
+            android:paddingVertical="2dp">
+
+            <EditText
+                android:id="@+id/return_quantitys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_edittext_background"
+                android:fontFamily="@font/avenirnextltpro_medium"
+                android:gravity="center"
+                android:hint="@string/quantity_label"
+                android:inputType="number"
+                android:maxLength="8"
+                android:minWidth="80dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/primary"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/return_reason_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+           android:layout_marginStart="5dp"
+            android:layout_weight="1.4"
+            android:background="@drawable/shape_curve_grey_small"
+            android:orientation="vertical"
+            android:paddingVertical="2dp">
+
+          <!--  <EditText
+                android:id="@+id/return_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_edittext_background"
+                android:fontFamily="@font/avenirnextltpro_medium"
+                android:gravity="center"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:maxLength="8"
+                android:minWidth="80dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/primary"
+                android:textSize="15dp"
+                android:textStyle="bold" />-->
+            <TextView
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:layout_gravity="center_horizontal"
+
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+
+                android:id="@+id/return_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenirnextltpro_medium"
+                android:background="@drawable/rounded_edittext_background"
+
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/primary"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="@string/good_label"
+
+                android:gravity="center"
+
+              />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/paymentcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantity_layout">
+
+        <LinearLayout
+            android:id="@+id/payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/colorwhite"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <!--  <TextView
+                      android:id="@+id/price_details"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="8dp"
+                      android:drawableStart="@drawable/inr"
+                      android:drawablePadding="6dp"
+                      android:fontFamily="@font/poppins_semibold"
+                      android:text="@string/price_details_label"
+                      android:textColor="@color/goodgrey"
+                      android:textSize="15dp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="4dp"
+
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="left"
+                    android:text="@string/pos_sub_total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/subtotals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="right"
+                    android:text="RWF0.00"
+                    android:textColor="@color/goodgrey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <!--  <LinearLayout
+                  android:id="@+id/discountLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="8dp"
+                  android:layout_marginTop="6dp"
+                  android:background="@drawable/shape_curve_grey_small"
+                  android:orientation="horizontal"
+                  android:paddingHorizontal="10dp"
+                  android:paddingVertical="4dp">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_weight="1"
+                      android:fontFamily="@font/poppins_regular"
+                      android:gravity="left"
+                      android:text="@string/discount_label"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textColor="#000" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:fontFamily="@font/poppins_medium"
+                      android:gravity="right"
+                      android:text="- "
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textColor="@color/goodgrey" />
+
+                  <TextView
+                      android:id="@+id/discountAmount"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:fontFamily="@font/poppins_regular"
+                      android:gravity="right"
+                      android:textAppearance="?android:attr/textAppearanceSmall" />
+              </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/taxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/shape_curve_grey_small"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/taxfield"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="left"
+                    android:text="@string/pos_tax_label"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/taxAmounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="right"
+                    android:text="REF0.00"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/del_charge_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_curve_grey_small"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="left"
+                    android:text="@string/pos_discounts"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/discountvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="right"
+                    android:textColor="@color/goodgrey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_dotted_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/shape_curve_grey_small"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="left"
+                    android:text="@string/pos_grand_total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorgreytwo" />
+
+                <TextView
+                    android:id="@+id/alltotalAmounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="right"
+                    android:text="RWF0.00"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/goodgrey" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/paymentcards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantity_layouts">
+
+        <LinearLayout
+            android:id="@+id/payments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/colorwhite"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <!--  <TextView
+                      android:id="@+id/price_details"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="8dp"
+                      android:drawableStart="@drawable/inr"
+                      android:drawablePadding="6dp"
+                      android:fontFamily="@font/poppins_semibold"
+                      android:text="@string/price_details_label"
+                      android:textColor="@color/goodgrey"
+                      android:textSize="15dp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="4dp"
+
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="left"
+                    android:text="@string/pos_sub_total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/subtotalss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="right"
+                    android:text="RWF0.00"
+                    android:textColor="@color/goodgrey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <!--  <LinearLayout
+                  android:id="@+id/discountLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="8dp"
+                  android:layout_marginTop="6dp"
+                  android:background="@drawable/shape_curve_grey_small"
+                  android:orientation="horizontal"
+                  android:paddingHorizontal="10dp"
+                  android:paddingVertical="4dp">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_weight="1"
+                      android:fontFamily="@font/poppins_regular"
+                      android:gravity="left"
+                      android:text="@string/discount_label"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textColor="#000" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:fontFamily="@font/poppins_medium"
+                      android:gravity="right"
+                      android:text="- "
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textColor="@color/goodgrey" />
+
+                  <TextView
+                      android:id="@+id/discountAmount"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:fontFamily="@font/poppins_regular"
+                      android:gravity="right"
+                      android:textAppearance="?android:attr/textAppearanceSmall" />
+              </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/taxLayouts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/shape_curve_grey_small"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/taxfields"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="left"
+                    android:text="@string/pos_tax_label"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/taxAmountss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="right"
+                    android:text="REF0.00"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/del_charge_layouts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_curve_grey_small"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="left"
+                    android:text="@string/pos_discounts"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/discountvalues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="right"
+                    android:textColor="@color/goodgrey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_dotted_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/shape_curve_grey_small"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="left"
+                    android:text="@string/pos_grand_total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorgreytwo" />
+
+                <TextView
+                    android:id="@+id/alltotalAmountss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="right"
+                    android:text="RWF0.00"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/goodgrey" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

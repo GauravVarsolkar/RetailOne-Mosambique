@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/about_us"
+        android:title="@string/about_us"
+        android:icon="@drawable/svg_about_us" />
+
+    <item
+        android:id="@+id/contact_us"
+        android:title="@string/contact_us"
+        android:icon="@drawable/svg_contact" />
+
+    <item
+        android:id="@+id/change_language"
+        android:title="@string/change_language"
+        android:icon="@drawable/svg_language" />
+
+    <item
+        android:id="@+id/log_data"
+        android:title="@string/log_data"
+        android:icon="@drawable/expense_history" />
+
+</menu>

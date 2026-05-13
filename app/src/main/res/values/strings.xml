@@ -1,0 +1,768 @@
+<resources>
+    <string name="app_name">Retailone POS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="cashup_text">You will not be able to perform any SALE transactions on this date after Cash-Up, do you want to perform EOD Cash-Up?</string>
+
+    <string name="error_response">Failed to fetch data. Please try again.</string>
+    <string name="failed_response">Network error. Please check your internet connection.</string>
+    <string name="resend_timer">Resend in %1$d seconds</string>
+
+    <string name="skip_text">Continue as New Customer</string>
+    <!-- res/values/strings.xml -->
+    <string name="otp_label">OTP: %1$s</string>
+    <string-array name="good_reasons_array">
+        <item>Good - No issues</item>
+        <item>Customer Return</item>
+        <item>Stock Adjustment</item>
+    </string-array>
+    <!-- Print -->
+    <string name="print_test">Print Test</string>
+    <string name="printer_version">Printer Version：</string>
+    <string name="bar_code">Barcode:</string>
+    <string name="print_bar_code">Print Barcode</string>
+    <string name="D_bar_code">Qrcode:</string>
+    <string name="print_2D_barcode">Print Qrcode</string>
+    <string name="walk_paper_lines">Walk Paper Lines:</string>
+    <string name="walk_paper_test">Walk Paper</string>
+    <string name="left_margin">Left Margin:</string>
+    <string name="right_margin">Right Margin</string>
+    <string name="row_space">Row Space:</string>
+    <string name="font_size">Font Size：</string>
+    <string name="gray_level">Gray Level:</string>
+    <string name="print_style_italic_enable">Enable Italic</string>
+    <string name="print_style_italic_disable">Disable Italic</string>
+    <string name="print_style_three_height_enable">Enable three height</string>
+    <string name="print_style_three_height_disable">Disable three height</string>
+    <string name="print_style_two_width_enable">Enable two width</string>
+    <string name="print_style_two_width_disable">Disable two width</string>
+    <string name="print_content">Print Content：</string>
+    <string name="chinese_example">ZH Example</string>
+    <string name="english_example">EN Example</string>
+    <string name="persian_example">Persian Example</string>
+    <string name="french_example">French Example</string>
+    <string name="japanese_example">Japanese Example</string>
+    <string name="korean_example">Korean Example</string>
+    <string name="russian_example">Russian Example</string>
+    <string name="thailand_example">Thai Example</string>
+    <string name="cambodia_example">Khmer Example</string>
+    <string name="laos_example">Laos Example</string>
+    <string name="print_count">Print Count:</string>
+    <string name="print_cut_count">Cut Count:</string>
+    <string name="clear_text">Clear</string>
+    <string name="print_text">Print Text</string>
+    <string name="print_columns">Print Columns</string>
+    <string name="check_status">Check Status</string>
+    <string name="print_georgia_text">Print Georgia</string>
+    <string name="print_foreign_text">Print Special Language</string>
+    <string name="printing_wait">Printing, please wait……</string>
+    <string name="D_barcode_loading">Qrcode loading</string>
+    <string name="generate_barcode_wait">Generating barcode, please wait……</string>
+    <string name="input_print_data">Please input print data</string>
+    <string name="print_paper_width">Paper Width:</string>
+    <string name="printer_paper_80mm">80mm</string>
+    <string name="printer_paper_58mm">58mm</string>
+    <string name="maker_search_distance">Walk Paper For Search Black Block:</string>
+    <string name="maker_walk_distance">Walk Paper After Haved Search:</string>
+    <string name="maker_walk_distance_range">(0-255)</string>
+    <string name="maker">Black Block Detection</string>
+    <string name="maker_error">maker input value not fit</string>
+    <string name="maker_not_find">Cannot Find Black Block</string>
+    <string name="papercut">Paper Cut</string>
+    <string name="inverse">inverse</string>
+    <string name="not_inverse">not inverse</string>
+    <string name="walk_paper_intput_value">walk paper intput value not fit</string>
+    <string name="print_picture">Print Picture</string>
+    <string name="print_long_picture">Print Long Picture</string>
+    <string name="print_long_text">Print Long Text</string>
+    <string name="print_black">Print Black</string>
+    <string name="print_interval">Cricle Print Interval</string>
+    <string name="print_cricle_start">Start Cricle Paint</string>
+    <string name="print_cricle_stop">Stop Cricle Paint</string>
+    <string name="print_cricle_hint">sec/time</string>
+    <string name="sure">sure</string>
+    <string name="not_find_picture">not find picture</string>
+    <string name="input_command">Please Input Command</string>
+    <string name="execute_command">Execute Command</string>
+    <string name="watting">Please wait while checking driver version</string>
+    <string name="openDoor">Printer cover open！</string>
+    <string name="hardwareAlarm">Hardware alarm</string>
+    <string name="printerReset">Reset Printer/Printer alarm Cleared</string>
+    <string name="noPaper">No paper</string>
+    <string name="paperReady">Paper already</string>
+    <string name="paperCutError">Paper cutting error</string>
+    <string name="coverColse">Printer cover Close</string>
+    <string name="noPaperNotice">No paper, please put paper in and retry</string>
+    <string name="LowBattery">Low battery, please connect the charger!</string>
+    <string name="overTemp">over temp !</string>
+    <string name="ptintInit">Printer initialing... Please try again after a few seconds.</string>
+    <string name="outOfLeft">Beyond the left margin！</string>
+    <string name="outOfLine">Beyond the row space！</string>
+    <string name="outOfFont">Beyond the font size！</string>
+    <string name="outOfGray">Beyond the gray level！</string>
+    <string name="outOfCharSpace">Beyond The Char Space！</string>
+    <string name="empty">The content is empty！</string>
+    <string name="lengthNotEnougth">The length is not enough！</string>
+    <string name="index_text">Print Text</string>
+    <string name="index_pic">Picture/Qrcode</string>
+    <string name="index_comm">Print Command</string>
+    <string name="input_content">input content</string>
+    <string name="dialog_comfirm">ConFirm</string>
+    <string name="operation_result">Result</string>
+    <string name="bl_dy">Print</string>
+    <string name="print_waring">Tip: If the SDK provides the function of can not meet your printing needs, you can send the print instruction way for implementation</string>
+    <string name="printer_type_80mm">80mm Printer</string>
+    <string name="printer_type_58mm">58mm Printer</string>
+    <string name="printer_type_select">Select Printer Type</string>
+    <string name="string_offset_range">(0-255)Multiple of 8</string>
+    <string name="short_text_content">Short Text</string>
+    <string name="hint_short_text">Short Text Within A Line</string>
+    <string name="print_short_text">Print Short Text</string>
+    <string name="param_error">Invalid Argument</string>
+    <string name="auto_linefeed">Auto Linefeed</string>
+    <string name="text_bold">Bold Font</string>
+    <string name="text_too_long">Text too long</string>
+    <string name="text_format_error">Text With Wrong Format</string>
+    <string name="interval_format_error">Print Interval With Wrong Format</string>
+    <string name="not_support">Linefeed Is Disabled</string>
+    <string name="checkPrinterType">Detect printer type</string>
+    <string name="check_error">The detection fails, please check whether there is no paper and whether the cover is closed</string>
+    <string name="printContent1" translatable="false">\n             烧烤\n----------------------------\n日期：2015-01-01 16:18:20\n卡号：12378945664\n单号：1001000000000529142\n----------------------------\n  项目    数量   单价  小计\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n 合计：1000：00元\n----------------------------\n本卡金额：10000.00\n累计消费：1000.00\n本卡结余：9000.00\n----------------------------\n 地址：广东省佛山市南海区桂城街道桂澜南路45号鹏瑞利广场A317.B-18号铺\n欢迎您的再次光临\n</string>
+    <string name="foreignLanguage" translatable="false">აშო, ჩელა, ვიშო ბუსქა,ოუ, ნანა, ოუ ნანა, ნანინა.სი მონობაშ, გეგაფილი,ოუ, ნანა, სკალი ცოდვა, ნანინა.\nმისამღერი:.ოუ, ნანა, ოუ ნანა, ნანინა…სი უჩხონჩხე, სი უგურე,ოუ, ნანა, სკალი ცოდვა, ნანინა.სი კისერი ელაფირი.ოუ, ნანა, სკალი ცოდვა, ნანინა.მისამღერი..</string>
+    <string name="tem_cannt_null">The temperature protection value cannot be empty</string>
+    <string name="tem_set_wrong">The temperature protection value is set incorrectly</string>
+    <string name="tem_set_success">set successfully</string>
+    <string name="str581" translatable="false">\n             烧烤\n----------------------------\n日期：2015-01-01 16:18:20\n卡号：12378945664\n单号：1001000000000529142\n----------------------------\n  项目          数量    单价    小计\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n 合计：1000：00元\n----------------------------\n本卡金额：10000.00\n累计消费：1000.00\n本卡结余：9000.00\n----------------------------\n 地址：广东省佛山市南海区桂城街道桂澜南路45号鹏瑞利广场A317.B-18号铺\n欢迎您的再次光临\n</string>
+    <string name="print_check_info">print check info</string>
+    <string name="hal_version">hardware version:</string>
+    <string name="soft_version">software version:</string>
+    <string name="print_addtext_count">text count(len):</string>
+
+
+    <!-- Scan barcode or qrcode -->
+    <string name="qrcode_verify">Qrcode</string>
+    <string name="qrcode_dialog_title">Select decoding type</string>
+    <string name="qrcode_dialog_msg">Please select read head decoding type</string>
+    <string name="qrcode_dialog_soft_decoding">Soft decoding</string>
+    <string name="qrcode_dialog_hard_decoding">Hard decoding</string>
+    <string name="qrcode_scan_success">Scan Success</string>
+
+
+    <string name="identify_fail">API module is not installed, can not be two-dimensional code / ID card identification</string>
+
+    <!-- Login Screen -->
+    <string name="select_language">Select Language</string>
+    <string name="lang_english">English</string>
+    <string name="lang_portuguese">Português</string>
+    <string name="english">English</string>
+    <string name="portuguese">Portuguese</string>
+    <string name="platform_name">Kookwell Retail Platform</string>
+    <string name="company_name">Mount Meru</string>
+    <string name="mpos_login">MPOS Login</string>
+    <string name="hint_email">Enter your Email</string>
+    <string name="hint_pin">Enter 6 digit PIN</string>
+    <string name="forgot_pin">Forgot PIN</string>
+    <string name="login">Login</string>
+    <string name="or_text">- OR -</string>
+    <string name="biometric_login">Biometric Login</string>
+    <string name="company_location">PROD - MOZAMBIQUE</string>
+    <string name="fetching_store_details">Fetching Store Details...</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="user_no_store">User not associated with any store</string>
+    <string name="error_enter_email">Please Enter Registered Email id</string>
+    <string name="error_valid_email">Please Enter a valid Email id</string>
+    <string name="error_enter_pin">Please Enter 6 digit PIN</string>
+
+    <!-- Dashboard Screen -->
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="error_customer_mobile">Enter Valid Customer Mobile No or TIN</string>
+    <string name="error_device_id">Couldn\'t fetch device id</string>
+    <string name="error_store_manager">Couldn\'t fetch store manager info</string>
+    <string name="logout_confirm_msg">Are you sure you want to Logout?</string>
+    <string name="change_language">Change Language</string>
+    <string name="log_data">LogData (For Developers)</string>
+    <string name="cashup_required_title">Cashup Required</string>
+    <string name="cashup_required_msg">Your last cashup was on a previous day. Please perform a new cashup.</string>
+    <string name="cashup_now_btn">Cash Up Now</string>
+    <string name="existing_customer_label">Existing Customer?</string>
+    <string name="tin_label">TIN</string>
+    <string name="mobile_label_caps">MOBILE</string>
+    <string name="hint_enter_customer_details">Enter Ext Customer\'s Mobile/TIN/TPIN No</string>
+    <string name="submit_btn">Submit</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="confirm_btn_caps">CONFIRM</string>
+    <string name="ok_caps">OK</string>
+    <string name="status_label">Status</string>
+    <string name="quantity_label">Quantity</string>
+    <string name="add_product_label">Add Product</string>
+    <string name="batch_label">Batch</string>
+    <string name="price_label">Price</string>
+    <string name="reason_label">Reason</string>
+    <string name="return_label">Return</string>
+    <string name="purchased_label">Purchased</string>
+    <string name="material_received_successfully">Material Received Successfully</string>
+    <string name="status_pending">Pending</string>
+    <string name="status_approved">Approved</string>
+    <string name="status_dispatched">Dispatched</string>
+    <string name="status_received">Received</string>
+    <string name="status_rejected">Rejected</string>
+    <string name="status_return_approved">Return Approved</string>
+    <string name="units_label">Units</string>
+    <string name="units_suffix">%1$s units</string>
+    <string name="liters_label">Liters</string>
+    <string name="unit_label">Unit</string>
+    <string name="status_unknown">Unknown</string>
+    <string name="out_of_stock_label">Out Of Stock</string>
+
+    <string name="stock_quantity_prefix">Stock Quantity: %1$s</string>
+    <string name="reorder_level_prefix">Reorder Level: %1$s</string>
+    <string name="items_suffix">%1$s items</string>
+    <string name="item_suffix">%1$s item</string>
+    <string name="error_quantity_zero">Product quantity can\'t be zero</string>
+    <string name="error_more_than_stock">Can\'t add %1$s more than stock</string>
+    <string name="error_cashup_failed">Cashup failed, please try again later</string>
+    <string name="proceed_btn_caps">PROCEED</string>
+    <string name="choose_image_source">Choose an image to upload from</string>
+    <string name="source_gallery">Gallery</string>
+    <string name="source_camera">Camera</string>
+    <string name="cancel_btn_caps">CANCEL</string>
+    <string name="attendance_title">Attendance As per MPOS</string>
+    <string name="month_label">Month</string>
+    <string name="working_days_label">Working Days</string>
+    <string name="error_attendance_not_found">Attendance list not found</string>
+
+
+
+
+
+
+
+
+
+    <!-- Dashboard Cards -->
+    <string name="pos_title">Point Of Sale</string>
+    <string name="stock_requisition">Stock Requisition</string>
+    <string name="material_receiving">Material Receiving</string>
+    <string name="product_inventory">Product Inventory</string>
+    <string name="cash_up">Cash Up</string>
+    <string name="sales_payment">Sales &amp; Payment</string>
+    <string name="expense_register">Expense Register</string>
+    <string name="profile_attendance">Profile &amp; Attendance</string>
+    <string name="return_product">Return Product</string>
+    <string name="goods_return_warehouse">Goods Return to Warehouse</string>
+
+    <!-- Forgot PIN Screen -->
+    <string name="forgot_reset_your_pin">Reset Your PIN</string>
+    <string name="forgot_hint_mobile">Enter your mobile no</string>
+    <string name="forgot_send_otp">Send OTP</string>
+    <string name="forgot_enter_otp">Enter 6 digit OTP recived on</string>
+    <string name="forgot_mobile_no">mobile no</string>
+    <string name="forgot_resend_otp">Resend OTP</string>
+    <string name="forgot_verify_otp">Verify OTP</string>
+    <string name="forgot_enter_otp_btn">Enter OTP</string>
+    <string name="forgot_hint_new_pin">Enter a new 6 digit PIN</string>
+    <string name="forgot_hint_confirm_pin">Re-Enter the new PIN</string>
+    <string name="forgot_reset_pin">Reset PIN</string>
+    <string name="forgot_confirm_pin_mismatch">Confirm pin must be same as new pin</string>
+    <string name="forgot_enter_valid_pin">Please enter valid pin</string>
+    <string name="forgot_invalid_otp">Invalid OTP</string>
+    <string name="forgot_enter_valid_mobile">please enter valid mobile no</string>
+
+    <!-- Cash Up Screen -->
+    <string name="cashup_yes_confirm">Yes, I confirm</string>
+    <string name="cashup_start_process">Start CashUp Process</string>
+    <string name="cashup_confirm_start">Please Confirm to Start Cashup</string>
+
+    <!-- Cash Up Details Screen -->
+    <string name="cashup_time_label">Cash-up Time : %1$s</string>
+    <string name="cashup_insufficient_amount">Insufficient Expected Amount for Cash Up</string>
+    <string name="cashup_actual_cash_exceeds">Actual cash amount can\'t be more than expected cash</string>
+    <string name="cashup_actual_petty_exceeds">Actual Petty cash amount can\'t be more than expected cash</string>
+    <string name="cashup_enter_valid_cash">Please enter valid cash amount</string>
+    <string name="cashup_enter_valid_petty">Please Enter a valid pettycash amount</string>
+    <string name="cashup_verify_bank_mobile">Please verify the bank mobile no</string>
+    <string name="cashup_enter_valid_bank">Please enter valid transfer amount to bank</string>
+    <string name="cashup_enter_valid_ccard">Please enter valid credit card amount</string>
+    <string name="cashup_enter_valid_dcard">Please enter valid Debit Card amount</string>
+    <string name="cashup_enter_valid_mmoney">Please enter valid M-Money amount</string>
+    <string name="cashup_mmoney_exceeds_expected">Actual M money amount can\'t more than expected</string>
+    <string name="cashup_enter_valid_mobile">Please enter valid mobile no</string>
+    <string name="cashup_enter_6digit_otp">Please enter 6 digit OTP</string>
+    <string name="cashup_confirm_msg">Are you sure you want to complete cashup?</string>
+    <string name="cashup_submitting">Submitting…</string>
+    <string name="cashup_fetch_device_id">Couldn\'t fetch device id</string>
+    <string name="cashup_fetch_store_manager">Coudn\'t fetch store manager info</string>
+    <string name="cashup_enter_totalizer">Please enter a totalizer value</string>
+    <string name="cashup_bank_exceeds">Can\'t transfer an amount to the bank greater than the expected cash.</string>
+    <string name="cashup_actual_mmoney_exceeds">Actual M Money cash amount can\'t be more than expected M Money</string>
+    <string name="cashup_date">Date</string>
+    <string name="cashup_mop">MOP</string>
+    <string name="cashup_expected">Expected</string>
+    <string name="cashup_actual">Actual</string>
+    <string name="cashup_diff">Diff</string>
+    <string name="cashup_mmoney">M Money</string>
+    <string name="cashup_enter">Enter</string>
+    <string name="cashup_cash">Cash</string>
+    <string name="cashup_petty_cash">Petty Cash</string>
+    <string name="cashup_opening_cash">Opening Cash Balance</string>
+    <string name="cashup_receipts">Cash Receipts (Sales)</string>
+    <string name="cashup_refunds">Cash Refunds (Sales returns)</string>
+    <string name="cashup_opening_petty">Opening Petty Cash Balance</string>
+    <string name="cashup_petty_in">Petty Cash IN</string>
+    <string name="cashup_petty_out">Petty Cash OUT</string>
+    <string name="cashup_sales_summary">Sales Summary</string>
+    <string name="cashup_to_bank">To Bank</string>
+    <string name="cashup_not_verified">Not Verified</string>
+    <string name="cashup_verified">Verified</string>
+    <string name="cashup_enter_mobile">Enter Mobile number</string>
+    <string name="cashup_send_otp">Send OTP</string>
+    <string name="cashup_enter_otp_hint">Enter OTP</string>
+    <string name="cashup_verify_otp">Verify OTP</string>
+    <string name="cashup_enter_transfer">Enter Transfer Amount</string>
+    <string name="cashup_credit_card">Credit Card</string>
+    <string name="cashup_debit_card">Debit Card</string>
+    <string name="cashup_complete">Complete CashUp</string>
+    <string name="expense_petty_cash_account">Petty Cash Account</string>
+    <string name="expense_balance">Balance</string>
+    <string name="expense_view_details">View Details</string>
+    <string name="expense_expenses_title">Petty Cash Expenses :-</string>
+    <string name="expense_new_entry">New Expense Entry</string>
+    <string name="expense_summary">Expense Summary</string>
+    <string name="expense_enter_date">Enter Date*</string>
+    <string name="expense_select_party_label">Select Party Name*</string>
+    <string name="expense_enter_party_label">Enter party name</string>
+    <string name="expense_select_type_label">Select Expense Type*</string>
+    <string name="expense_enter_type_label">Enter Expence Type*</string>
+    <string name="expense_enter_amount">Enter amount*</string>
+    <string name="expense_enter_vat">Enter VAT amount*</string>
+    <string name="expense_total_amount">Total Amount*</string>
+    <string name="expense_enter_sdc">Enter SDC No/R</string>
+    <string name="expense_enter_receipt">Enter Receipt No/R</string>
+    <string name="expense_description">Description/Remark*</string>
+    <string name="expense_scan_invoice">Scan Invoice</string>
+    <string name="expense_submit">Submit Expense</string>
+    <string name="pos_try_again_later">Please,Try again later..</string>
+    <string name="pos_tax_value">(+) Tax %1$s</string>
+    <string name="pos_items_count">%1$d items</string>
+    <string name="pos_scan_prompt">Scan a QR code or barcode</string>
+
+    <!-- Point of Sale Screen -->
+    <string name="pos_enter_product">Enter product name or scan</string>
+    <string name="pos_select_product">Select Product</string>
+    <string name="pos_sub_total">Sub Total</string>
+    <string name="pos_tax_label">(+) Tax</string>
+    <string name="pos_discounts">(-) Discounts</string>
+    <string name="pos_grand_total">Total</string>
+    <string name="pos_next">Next</string>
+    <string name="pos_details_customer_details">Customer Details</string>
+    <string name="pos_details_existing">Existing</string>
+    <string name="pos_details_new">New</string>
+    <string name="pos_details_tin_hint">Customer TIN no (Optional)</string>
+    <string name="pos_details_iva_hint">Customer IVA no (Optional)</string>
+    <string name="pos_details_mobile_hint">Customer Mobile no (Optional)</string>
+    <string name="pos_details_name_hint">Customer name (Optional)</string>
+    <string name="pos_details_create_new">Create New Customer</string>
+    <string name="pos_details_choose_method">Choose Method of Payment</string>
+    <string name="pos_details_enter_invoice_hint">Enter Invoice Number</string>
+    <string name="pos_details_amount_tendered">Amount tendered</string>
+    <string name="pos_details_print_after_sale">Print after sale</string>
+    <string name="pos_details_complete_sale">Complete Sale</string>
+    <string name="pos_scan_cancelled">Scan cancelled</string>
+    <string name="pos_product_unavailable">Scanned Product Currrently Unavailable</string>
+    <string name="pos_qty_zero">Quantity Of a Item can\'t be zero or empty</string>
+    <string name="pos_add_item">Please Add Atleast one item</string>
+    <string name="pos_leave_screen">Leave this screen?</string>
+    <string name="pos_confirm_back">Are you sure you want to go back?</string>
+    <string name="pos_no">No</string>
+    <string name="pos_yes">Yes</string>
+    <string name="pos_sell_dispensed">Please sell the dispensed item first</string>
+    <string name="pos_already_in_cart">Item already added to cart</string>
+    <string name="pos_out_of_stock">Out Of Stock</string>
+    <string name="pos_units">%1$s Units</string>
+
+    <!-- POS Details Screen -->
+    <string name="pos_details_enter_name">Please Enter Customer Name</string>
+    <string name="pos_details_enter_tin">Please Enter Customer TIN Number</string>
+    <string name="pos_details_valid_mobile">Please Enter Valid Mobile Number</string>
+    <string name="pos_details_valid_tin">Please Enter Valid TIN Number</string>
+    <string name="pos_details_enter_mobile">Please Enter Customer Mobile Number</string>
+    <string name="pos_details_enter_payment">Please Enter Payment Type</string>
+    <string name="pos_details_store_error">Could\'t fetch store info,Please try again..</string>
+    <string name="pos_details_manager_error">Could\'t fetch store manager info,Please try again..</string>
+    <string name="pos_details_enter_invoice">Please Enter Valid Invoice Number</string>
+    <string name="pos_details_invoice_used">This invoice number is already used for this store. Please use a new invoice number.</string>
+    <string name="pos_details_no_items">No valid items to sell. Please add quantities.</string>
+    <string name="pos_details_customer_exists">Customer Already Exists!</string>
+
+    <!-- Stock Requisition Screen -->
+    <string name="stock_past_requisitions">Past Requisitions</string>
+    <string name="stock_ordered_at">Ordered at: %1$s</string>
+    <string name="stock_approved_at">Approved at: %1$s</string>
+    <string name="stock_dispatched_at">Dispatched at: %1$s</string>
+    <string name="stock_received_at">Received at: %1$s</string>
+    <string name="stock_view_all">View All</string>
+    <string name="stock_product_reorder_alert">Product Reorder Alert</string>
+    <string name="stock_submit_new">Submit New Requisition</string>
+    <string name="stock_search_product">Search Products</string>
+    <string name="stock_submit_requisition">Submit Requisition</string>
+    <string name="stock_no_data">No Data Found</string>
+
+    <!-- Material Receiving Screen -->
+    <string name="material_order_id">OrderID - %1$s</string>
+    <string name="material_status_pending">Status - Order waiting for approval</string>
+    <string name="material_status_approved">Status - Order approved, waiting for dispatch</string>
+    <string name="material_status_dispatched">Status - Order dispatched</string>
+    <string name="material_status_cancelled">Status - Order Cancelled</string>
+    <string name="material_status_received">Status - Order has been received successfully</string>
+    <string name="material_status_unknown">Status -</string>
+    <string name="material_receive_item">Please Receive at least one item</string>
+    <string name="material_all_empty">all received item can\'t be empty or zero</string>
+    <string name="material_enter_vehicle">Please Enter Vehicle Number</string>
+    <string name="material_enter_driver">Please Enter Driver Name</string>
+    <string name="material_scan_stn">Please Scan STN</string>
+    <string name="material_confirm_receive">Are you sure you want to receive the materials?</string>
+    <string name="material_stn_failed">STN upload failed</string>
+    <string name="material_receive_all">please receive all the materials</string>
+    <string name="material_no_image">No image captured</string>
+    <string name="material_error_image">Error creating image file</string>
+    <string name="material_permissions_denied">Permissions were denied</string>
+    <string name="material_grant">GRANT</string>
+    <string name="material_ordered_at">Ordered at: %1$s</string>
+    <string name="material_approved_at">Approved at: %1$s</string>
+    <string name="material_received_at">Received at: %1$s</string>
+
+    <!-- Expense Register Screen -->
+    <string name="expense_amount_hint">Enter expense amount (in %1$s)*</string>
+    <string name="expense_no_history">No History Found</string>
+    <string name="expense_invoice_failed">Invoice upload failed</string>
+    <string name="expense_enter_valid_type">Please enter a valid expence type</string>
+    <string name="expense_select_type">Please select expense type</string>
+    <string name="expense_enter_type">Please enter a expence type</string>
+    <string name="expense_enter_valid_amount">Please enter valid expense amount</string>
+    <string name="expense_enter_valid_party">Please enter a valid party name</string>
+    <string name="expense_select_party">Please select party name</string>
+    <string name="expense_manager_error_label">Could\'t fetch store manager info,Please try again..</string>
+    <string name="expense_enter_valid_sdc">Please enter a valid SDC No</string>
+    <string name="expense_enter_valid_remarks">Please enter a valid remarks</string>
+    <string name="expense_cant_be_zero">Expence Can\'t be zero</string>
+    <string name="expense_enter_valid_vat">Please enter a valid vat amount</string>
+    <string name="expense_vat_exceeds">VAT amount cannot be equal or more than expense amount</string>
+    <string name="expense_exceeds_petty">Can\'t expence more than the pettycash amount</string>
+    <string name="expense_sdc_12_digits">SDC Number should 12 digit</string>
+    <string name="expense_sdc_first3">First 3 digit should be charecter</string>
+    <string name="expense_sdc_last9">Last 9 digit should be Number</string>
+
+    <!-- Common / Shared Strings -->
+    <string name="new_activity" translatable="false">New Activity</string>
+
+    <!-- Additional screen localizations -->
+
+    <!-- Stock Requisition Screen Extra -->
+    <string name="stock_search_scan_hint">Search product name or scan barcode</string>
+    <string name="error_something_went_wrong">Something Went Wrong, Try again</string>
+    <string name="error_limit_exceeded">Limit Exceeded</string>
+    <string name="error_exposure_exceeded">Total exposure %1$s exceeds allowed limit %2$s.</string>
+    <string name="error_add_at_least_one">Please add at least one product in cart</string>
+    
+    <!-- Material Receiving Screen Extra -->
+    <string name="material_order_items">Ordered Items</string>
+    <string name="material_received_qty">Received Qty</string>
+    <string name="material_receive_btn">Receive</string>
+    <string name="material_qty_dispatched_label">Qty Dispatched</string>
+    <string name="material_lorry_details">Lorry Details</string>
+    <string name="material_stn_label">Stock Transfer Note (STN)</string>
+    <string name="material_scan_stn_btn">Scan STN</string>
+
+    <!-- Product Inventory Screen Extra -->
+    <string name="pi_search_hint">Find or scan barcode</string>
+    <string name="pi_stock_taking">Stock Taking</string>
+    <string name="status_expired">Expired</string>
+    <string name="status_store_stock">Store Stock</string>
+    <string name="status_good">Good</string>
+    <string name="status_damaged">Damaged</string>
+    <string name="status_defective">Defective</string>
+
+    <!-- Sales & Payment Screen Extra -->
+    <string name="sales_invoice">Invoice</string>
+    <string name="sales_invoice_paid">Invoice Paid</string>
+    <string name="sales_invoice_unpaid">Invoice Unpaid</string>
+    <string name="sales_payments">Payments</string>
+    <string name="sales_due">Due</string>
+    <string name="sales_invoice_id">Invoice ID</string>
+    <string name="sales_amount">Amount</string>
+    <string name="sales_filter">Filter</string>
+    <string name="sales_today_title">Today\'s Sales &amp; Payment</string>
+    <string name="sales_all_title">All Sales &amp; Payment</string>
+    <string name="sales_error_select_from">Please select From Date First</string>
+    <string name="sales_error_select_date">Please select date</string>
+    <string name="sales_error_store_info">Couldn\'t fetch store info</string>
+
+    <!-- Return Product Screen Extra -->
+    <string name="return_invoice_once_note">Note: An invoice can only be returned once.</string>
+    <string name="return_enter_invoice_hint">Enter Invoice ID</string>
+    <string name="return_select_reason_hint">Select Return Reason</string>
+    <string name="return_save_and_return">Save and Return</string>
+    <string name="return_error_invalid_invoice">Enter a valid Invoice ID</string>
+    <string name="return_error_search_first">Enter Invoice ID and Search</string>
+    <string name="return_error_already_returned">This invoice has already been returned and cannot be returned again.</string>
+    <string name="return_error_no_invoice">No Invoice Found</string>
+    <string name="return_error_select_reason">Please select any reason for return</string>
+    <string name="return_error_reason_not_found">Return reason not found, try after sometime</string>
+    <string name="return_error_nothing_to_return">You haven\'t Return anything</string>
+
+    <string name="material_vehicle_number_hint">Vehicle number</string>
+    <string name="material_driver_name_hint">Driver name</string>
+    <string name="sales_from_label">From</string>
+    <string name="sales_from_date_hint">From Date</string>
+    <string name="sales_to_label">To</string>
+    <string name="sales_to_date_hint">To Date</string>
+    <string name="sales_apply_filter_btn">Apply Filter</string>
+    <string name="stock_code_label">Code:</string>
+    <string name="stock_sellable_label">Sellable Stock:</string>
+    <string name="stock_total_label">Total Stock:</string>
+    <string name="stock_requested_label">Requested:</string>
+    <string name="stock_available_label">Available</string>
+    <string name="hint_enter_remarks">Enter remarks...</string>
+    <string name="sales_received">Received</string>
+    <string name="error_more_than_available">Entered quantity cannot be more than available (%1$d)</string>
+    <string name="search_btn_label">Search</string>
+    <string name="label_ordered_at">Ordered at: %1$s</string>
+    <string name="label_approved_at">Approved at: %1$s</string>
+    <string name="label_received_at">Received at: %1$s</string>
+    <string name="stock_label">Stock</string>
+    <string name="id_label">ID</string>
+    <string name="items_label_small">items</string>
+    <string name="invoice_label">Invoice</string>
+    <string name="status_label_small">status</string>
+    <string name="pos_dispense">Dispense</string>
+    <string name="pos_dispensed">Dispensed</string>
+    <string name="pos_search_product_hint">Enter product name or scan</string>
+    <string name="qty_label">Qty</string>
+    <string name="update_button_description">Update</string>
+    <string name="good_label">Good</string>
+    <string name="dispenser_control_title">Kookwell Dispenser Control</string>
+    <string name="uom_label">UOM</string>
+    <string name="product_name_placeholder">Product name</string>
+    <string name="dist_pack_label">Dist pack</string>
+    <string name="good_status_label">G - Good</string>
+    <string name="available_quantity_prefix">Available Quantity: %1$s</string>
+    <string name="add_to_cart_label">Add to Cart</string>
+    <string name="price_details_label">Price Details</string>
+    <string name="discount_label">Discount</string>
+    <string name="dispensing_unsuccessful">Dispensing Unsuccessful</string>
+    <string name="retry_label">Retry</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="booking_process_msg">Your Booking Is In Process</string>
+    <string name="batch_details_label">Batch Details</string>
+    <string name="expired_label">Expired</string>
+    <string name="damaged_label">Damaged</string>
+    <string name="category_prefix">Category: %1$s</string>
+    <string name="version_prefix">Version: 3.12</string>
+    <string name="dispatch_label">Dispatch</string>
+    <string name="id_prefix">ID: %1$s</string>
+    <string name="update_label">Update</string>
+
+    <string name="price_placeholder">RWF0.00</string>
+    <string name="zero_label">0</string>
+    <string name="dash_label">-</string>
+
+    <!-- Missing strings - full localization audit -->
+
+    <!-- Stock Requisition / Material Receiving - status labels -->
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_requested">Requested</string>
+
+    <!-- Timestamp labels - dispatched_at -->
+    <string name="label_dispatched_at">Dispatched at: %1$s</string>
+    <string name="material_dispatched_at">Dispatched at: %1$s</string>
+
+    <!-- Past Requisition Adapter -->
+    <string name="req_id_prefix">ID - %1$s</string>
+
+    <!-- Sales &amp; Payment -->
+    <string name="sales_quantity_prefix">Quantity: %1$s</string>
+    <string name="sales_tax_prefix">(+) Tax @%1$s%%: </string>
+    <string name="sales_cancel_label">Cancellation</string>
+    <string name="sales_grand_total_label">Grand Total</string>
+    <string name="sales_payment_type_label">Payment Type</string>
+    <string name="sales_customer_name_label">Customer Name</string>
+    <string name="sales_customer_iva_label">Customer IVA</string>
+    <string name="sales_store_name_label">Store Name</string>
+    <string name="sales_items_section">Sales Items</string>
+    <string name="sales_id_label">ID</string>
+    <string name="sales_date_label">Date</string>
+    <string name="sales_invoice_id_required">Invoice ID is required</string>
+    <string name="sales_cancel_sale_failed">Failed to cancel sale</string>
+    <string name="sales_something_went_wrong">Something went wrong: %1$s</string>
+    <string name="sales_fetch_failed">Failed to fetch data, Try again</string>
+
+    <!-- Sales Details Adapter - labels -->
+    <string name="sales_details_quantity_prefix">Quantity: %1$s</string>
+    <string name="sales_details_tax_prefix">(+) Tax @%1$s%%:   </string>
+    <string name="sales_details_tax_amount_prefix">ZWL%1$s</string>
+
+    <!-- Material Receiving - quantity validation toast -->
+    <string name="material_qty_exceeds_dispatch">The received quantity cannot be more than the dispatch quantity.</string>
+
+    <!-- Stock Requisition Search - toasts -->
+    <string name="stock_scan_cancelled">Scan cancelled</string>
+    <string name="stock_camera_permission">Camera permission is required</string>
+    <string name="stock_qty_zero_toast">Product Quantity can\'t be zero</string>
+    <string name="stock_exceed_toast">Can\'t add %1$s more than Stocks</string>
+    <string name="stock_exposure_exceeded_toast">Total exceeds actual store exposure!</string>
+
+    <!-- Goods Return to Warehouse -->
+    <string name="goods_return_id_prefix">ID: #%1$s</string>
+
+    <!-- No PDF selected -->
+    <string name="no_pdf_selected">No PDF selected</string>
+
+    <!-- Return product - tax label in code -->
+    <string name="return_tax_prefix">(+) Tax @%1$s</string>
+
+    <!-- Product Inventory Update screen -->
+    <string name="pi_stock_taking_date_prefix">Stock taking date: %1$s</string>
+    <string name="pi_error_qty_zero_empty">Product Quantity can\'t be empty or zero</string>
+    <string name="pi_error_select_at_least_one">Please select atleast one product</string>
+
+    <!-- POS Details screen dynamic hints -->
+    <string name="pos_details_name_req">Customer Name *</string>
+    <string name="pos_details_tin_req">Customer TIN no *</string>
+    <string name="pos_details_iva_req">Customer IVA no *</string>
+    <string name="pos_details_mobile_req">Customer Mobile no *</string>
+    <string name="pos_details_name_label">Customer Name</string>
+    <string name="pos_details_mobile_label">Customer Mobile no</string>
+    <string name="pos_details_tin_label">Customer TIN no</string>
+    <string name="pos_details_iva_label">Customer IVA no</string>
+    <string name="pos_details_tin_tpin_opt">Customer TIN/TPIN no (Optional)</string>
+    <!-- Petty Cash Details -->
+    <string name="pettycash_current_balance">Current Balance:</string>
+    <string name="pettycash_as_on_date">As on Date:</string>
+    <string name="pettycash_summary_title">Summary (of Last 15 Days)</string>
+    <string name="pettycash_date_label">Date</string>
+    <string name="pettycash_opening_label">Opening</string>
+    <string name="pettycash_received_label">Received</string>
+    <string name="pettycash_expenses_label">Expenses</string>
+    <string name="pettycash_closing_label">Closing</string>
+    <string name="proceed_to_dispatch">Proceed to Dispatch</string>
+    <string name="view_all_label">View All</string>
+    <string name="submit_new_return_request">Submit New Return Request</string>
+    <string name="sales_fetched_count_prefix">Sales Fetched: %1$d</string>
+    <string name="sales_no_sales_found">No Sales Found</string>
+    <string name="status_label_prefix">Status: %1$s</string>
+    <string name="requested_date_label_prefix">Requested Date: %1$s</string>
+    <string name="no_items_saved_return_msg">No items saved for return.</string>
+    <string name="others_category_label">Others</string>
+    <!-- New Customer Reg -->
+    <string name="new_customer_registration">New Customer Registration</string>
+    <string name="hint_enter_cin_number">Enter CIN Number</string>
+    <string name="hint_enter_customer_name">Enter Customer Name</string>
+    <string name="hint_enter_contact_person_name">Enter Contact Person Name</string>
+    <string name="hint_enter_mobile_number">Enter Mobile Number</string>
+    <string name="hint_enter_email">Enter Your Email</string>
+    <string name="hint_enter_address">Enter Your Adress</string>
+    <string name="hint_enter_tpin_number">Enter TPIN Number</string>
+    <string name="hint_enter_vat_no">Enter Your VAT No</string>
+    <string name="upload_kyc_document">Upload KYC document</string>
+    <string name="upload_kyc_note">*Please upload one consolidated PDF containing all KYC docs</string>
+
+    <string name="sales_invoice_already_cancelled">Invoice already cancelled</string>
+    <string name="sales_invoice_created_cancelled">Invoice created cancelled</string>
+    <string name="sales_mop_is_cash">MOP is Cash</string>
+    <string name="expense_enter_amount_hint">Enter Expense Amount</string>
+    <string name="expense_sub_total_label">Sub Total</string>
+    <string name="expense_total_label">Total</string>
+    <string name="expense_success">Success</string>
+    <string name="expense_invalid_file_format">Only JPEG, JPG, and PNG files are allowed</string>
+    <string name="expense_file_too_large">File size should be less than 300 KB</string>
+    
+    <!-- Stock Search / Search -->
+    <string name="search_product_or_scan_hint">Enter product name or scan</string>
+    <string name="confirm_btn">Confirm</string>
+    <string name="confirm_requisition_btn">Confirm Requsition</string>
+
+    <string name="pos_sale_successful">Sale Successful</string>
+    <string name="pos_saved_to_cart">Saved to Cart</string>
+    <string name="pos_tax">Tax</string>
+
+
+    <!-- Expense History Labels -->
+    <string name="expense_history_name">Name: </string>
+    <string name="expense_history_category">Category: </string>
+    <string name="expense_history_amount">Amount: </string>
+    <string name="expense_history_date">Date : </string>
+
+    <!-- Sale Correction Extra -->
+     <string name="return_error_no_items">You haven\'t Return anything</string>
+
+    <!-- Confirm Return Extra -->
+    <string name="dispatch_opened_prefix">Opened Dispatch for ID: %1$d</string>
+    <string name="error_all_fields_required">All fields are required</string>
+    
+    <!-- Sale correction -->
+    <string name="note_invoice_return_once">Note: An invoice can only be returned once.</string>
+    <string name="enter_invoice_id_hint">Enter Invoice ID</string>
+    <string name="search_btn">Search</string>
+    <string name="select_return_reason_hint">Select Return Reason</string>
+    <string name="sub_total_label">Sub Total</string>
+    <string name="grand_total_label">Grand Total</string>
+    <string name="total_amount_label">Total Amount</string>
+    <string name="save_generate_invoice_btn">Save and Generate Invoice</string>
+
+    <string name="pos_spot_discount_format">(-) Spot Discount %1$s%%</string>
+    <string name="sales_spot_discount_percent_format">Spot Discount: %1$s%%</string>
+    <string name="sales_spot_discount_amount_label">Spot Discount Amount: </string>
+    <string name="print_sdc_receipt_label">SDC ID/RECEIPT NO:</string>
+    <string name="print_buyers_name_label">BUYER’S NAME:</string>
+    <string name="print_buyers_tin_label">BUYER’S TIN:</string>
+    <string name="print_buyers_mobile_label">BUYER\'S MOBILE NO.:     </string>
+    <string name="print_vat_no_label">BUYER\'S IVA NO.:     </string>
+    <string name="apply_spot_discount_question">Do you want to apply on-spot discount?</string>
+    <string name="hint_spot_discount_percent">Enter on spot discount (%)</string>
+    <string name="spot_discount_label">Spot Discount</string>
+    <string name="spot_discount_amount_label_no_colon">Spot Discount Amount</string>
+    <string name="error_spot_discount_limit">Spot discount cannot exceed %1$s%%</string>
+    <string name="print_description">Description</string>
+    <string name="print_qty_rate_amount">Qty X Rate                 Amount</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="print_tin_no_label">TIN NO:</string>
+    <string name="print_date_label">DATE:</string>
+    <string name="print_on_spot_discount_label">On-Spot Discount %1$s%% :</string>
+    <string name="print_total_format">TOTAL (%1$s) :</string>
+    <string name="print_items_label">Items:</string>
+    <string name="print_tax_ex_label">TAX EX:</string>
+    <string name="print_tax_vat_label">TAX VAT @</string>
+    <string name="print_total_vat_label">TOTAL VAT:</string>
+    <string name="print_payable_label">PAYABLE:</string>
+    <string name="print_end_label">*** END ***</string>
+    <string name="print_internal_invoice">*** Internal Invoice ***</string>
+    <string name="print_credit_note">CREDIT NOTE</string>
+    <string name="print_initializing">Initializing Printer</string>
+    <string name="print_please_wait">Please wait…</string>
+    <string name="print_operation_result">Operation Result</string>
+    <string name="print_low_battery">Low Battery</string>
+    <string name="print_no_paper_title">No Paper</string>
+    <string name="print_no_paper_message">Please load paper and try again.</string>
+    <string name="print_no_paper_detected">No paper detected</string>
+    <string name="print_inc_16">INC. 16%%</string>
+
+    <!-- Printer Receipt - Return Type labels -->
+    <string name="print_tin_n0_label">TIN N0:</string>
+    <string name="print_return_sdc_receipt_label">SDC ID/RECEIPT NO:</string>
+    <string name="print_return_total_format">TOTAL (%1$s) :</string>
+    <string name="print_iva_ex_label">IVA EX:</string>
+    <string name="print_iva_vat_label">IVA @</string>
+    <string name="print_total_iva_label">TOTAL IVA:</string>
+    <string name="print_buyers_address_label">BUYER’S ADDRESS:</string>
+    <string name="print_cash_label">CASH:</string>
+    <string name="print_m_money_label">M-MONEY:</string>
+    <string name="hint_customer_address_optional">Customer Address (Optional)</string>
+    <string name="error_name_mandatory_high_value">Customer Name is mandatory for sales above 100,000</string>
+    <string name="error_mobile_mandatory_high_value">Customer Mobile No is mandatory for sales above 100,000</string>
+    <string name="error_tin_mandatory_high_value">Customer TIN No is mandatory for sales above 100,000</string>
+</resources>
+
